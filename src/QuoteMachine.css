@@ -1,0 +1,17 @@
+.quote-container{
+    background-color: plum;
+    border-radius: 10px;
+    border: 3px solid darkslateblue;
+    text-align: center;
+    text-overflow: clip;
+    font-size: 6px;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    aspect-ratio: 2/1;
+    transform: translate(-50%, -50%);
+
+    margin: 20px 0px;
+}
