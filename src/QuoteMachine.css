@@ -1,17 +1,123 @@
 .quote-container{
-    background-color: plum;
+    background-color: rgb(68, 44, 68);
     border-radius: 10px;
-    border: 3px solid darkslateblue;
+    border: 2px solid black;
+    outline: 3px solid darkorchid;
     text-align: center;
     text-overflow: clip;
     font-size: 6px;
     padding: 10px;
     position: fixed;
-    top: 50%;
+    top: 25%;
     left: 50%;
-    width: 70%;
-    aspect-ratio: 2/1;
-    transform: translate(-50%, -50%);
+    width: 500px;
+    /*aspect-ratio: 2/1;*/
+    box-shadow: 0px 0px 50px -10px violet;
+}
 
-    margin: 20px 0px;
+.flyin{
+    animation-name: flyin;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes flyin{
+    0% {transform: translateX(-300%)}
+    80% {transform: translateX(-45%)}
+    95% {transform: translateX(-51%)}
+    100% {transform: translateX(-50%)}
+}
+.flyout{
+    animation-name: flyout;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
+@keyframes flyout{
+    0% {transform: translatex(-50%)}
+    100% {transform: translatex(200%)}
+}
+
+.start-quote{
+    display: block;
+    position: relative;
+    left: 0px;
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: left;
+    text-shadow: 2px 2px 1px black;
+}
+.end-quote{
+    display: block;
+    position: relative;
+    left: 0px;
+    color: whitesmoke;
+    font-size: 30px;
+    text-align: right;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 1px black;
+}
+.quote{
+    color:whitesmoke;
+    font-size:x-large;
+    padding: 10px 5px;
+    text-shadow: 2px 2px 2px black;
+}
+.author{
+    color: whitesmoke;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px black;
+    text-align: right;
+    position: relative;
+    top: -50px;
+    right: 0px;
+}
+
+/*--------------- Button Bar ------------------*/
+.button-bar{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0px;
+    background-color: darkorchid;
+    color: whitesmoke;
+    font-size: 36px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.socials{
+    display: inline-flex;
+    position: absolute;
+    align-items: center;
+    left: 5px;
+    bottom: 0px;
+    height: 100%;
+}
+
+.button-bar a{
+    color: white;
+    padding: 0px 5px;
+    text-shadow: 2px 2px 1px black;
+}
+
+.button-bar a:hover{
+    cursor: pointer;
+}
+
+.btn-next-quote{
+    font-size: 20px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    padding: 5px 10px;
+    background-color: whitesmoke;
+    color: darkorchid;
+    border: 1px solid black;
+    box-shadow: 1px 1px 2px black;
+    border-radius: 10px;
+}
+
+.btn-next-quote:hover{
+    cursor: pointer;
 }
